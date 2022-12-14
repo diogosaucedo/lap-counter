@@ -39,8 +39,27 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `npm run storybook`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+It will start Storybook locally and output the address. Depending on your system configuration, it will automatically open the address in a new browser tab, and you'll be greeted by a welcome screen.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `npm run build-storybook`
+
+Running `npm run build-storybook` will output a static Storybook in the `storybook-static` directory, which can then be deployed to any static site hosting service.
+
+## Pagination Component
+
+### Resume
+
+'Lap Counter' is a project whose purpose is to simulate the calculation of average lap time in a race. By pressing 'start' a stopwatch is triggered and at each lap the '+' button can be pressed, and the system automatically calculates the average time per lap. The project was created using TypeScript, React, Styled-components and Storybook.
+
+This project is a variation of the "contador de voltas" project that Tulio Faria teaches in his course "DevReactJS"
+
+### Technologies
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="56" alt="typescript logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" width="56" alt="react logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" height="40" width="56" alt="jest logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg" height="40" width="56" alt="storybook logo"  />
+</div>
