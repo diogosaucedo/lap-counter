@@ -60,6 +60,7 @@ function App() {
     <div className="App">
       <GlobalStyles />
       <ShowLaps laps={numLaps} />
+      {numLaps > 0 && <ShowTime time={Math.round(time / numLaps)} />}
       <Stack gap="0.8rem" padding="0.8rem">
         <Button onClick={decrement} {...buttonProps}>
           -
@@ -68,7 +69,6 @@ function App() {
           +
         </Button>
       </Stack>
-      {numLaps > 0 && <ShowTime time={Math.round(time / numLaps)} />}
       <Stack gap="0.8rem" padding="0.8rem">
         <Button onClick={toggleRunning} {...buttonProps}>
           {running ? 'Pause' : 'Start'}
