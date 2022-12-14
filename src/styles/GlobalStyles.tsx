@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { white } from '../configs/colors';
 
 export default createGlobalStyle`
   * {
@@ -20,7 +21,12 @@ export default createGlobalStyle`
     font-weight: 400;
 
   }
-
+  .App {
+    background: ${white};
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+  }
   a {
     text-decoration: none;
   }

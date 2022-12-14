@@ -3,7 +3,8 @@ import GlobalStyles from './styles/GlobalStyles';
 import ShowLaps from './components/Lap Counter/Show Laps';
 import Button from './components/Form/Button';
 import ShowTime from './components/Lap Counter/Show Time';
-import { Divider } from './components/Data Display/Divider/styles';
+import { primaryColor, white } from './configs/colors';
+import Stack from './components/Layout/Stack';
 
 function App() {
   const [numLaps, setNumLaps] = React.useState(0);
@@ -44,20 +45,38 @@ function App() {
     setTime(0);
   };
 
+  // Styles
+  const buttonProps = {
+    width: '6.4rem',
+    height: '3.6rem',
+    fontSize: '1.4rem',
+    fontWeight: 500,
+    background: primaryColor,
+    color: white,
+    border: 'none',
+  };
+
   return (
     <div className="App">
       <GlobalStyles />
       <ShowLaps laps={numLaps} />
-      <Button onClick={decrement} width="32px" height="16px">
-        -
-      </Button>
-      <Button onClick={increment} width="32px" height="16px">
-        +
-      </Button>
+      <Stack gap="0.8rem" padding="0.8rem">
+        <Button onClick={decrement} {...buttonProps}>
+          -
+        </Button>
+        <Button onClick={increment} {...buttonProps}>
+          +
+        </Button>
+      </Stack>
       {numLaps > 0 && <ShowTime time={Math.round(time / numLaps)} />}
-      <Divider />
-      <Button onClick={toggleRunning}>{running ? 'Pause' : 'Start'}</Button>
-      <Button onClick={reset}>Restart</Button>
+      <Stack gap="0.8rem" padding="0.8rem">
+        <Button onClick={toggleRunning} {...buttonProps}>
+          {running ? 'Pause' : 'Start'}
+        </Button>
+        <Button onClick={reset} {...buttonProps}>
+          Restart
+        </Button>
+      </Stack>
     </div>
   );
 }
