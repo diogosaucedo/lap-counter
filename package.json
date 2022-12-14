@@ -1,4 +1,5 @@
 {
+  "homepage": "http://diogosaucedo.github.io/lap-counter",
   "name": "lap-counter",
   "version": "0.1.0",
   "private": true,
@@ -73,6 +74,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.8.0",
     "webpack": "^5.75.0"
   },
